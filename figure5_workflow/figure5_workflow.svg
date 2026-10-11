@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="424" viewBox="0 0 1000 424" font-family="Arial, 'Liberation Sans', Helvetica, sans-serif">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L10,5 L0,9 z" fill="#222"/></marker></defs>
+<rect width="1000" height="424" fill="#fff"/>
+<rect x="40" y="20" width="250" height="36" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<text x="165.0" y="42.3" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">Literature Review</text>
+<rect x="50" y="86" width="230" height="40" fill="#fff" stroke="#5a5a5a" stroke-width="1"/>
+<text x="165.0" y="103.0" text-anchor="middle" font-size="12.5" font-weight="normal" fill="#222">AI-Assisted Situated</text>
+<text x="165.0" y="117.5" text-anchor="middle" font-size="12.5" font-weight="normal" fill="#222">Storytelling Systems</text>
+<rect x="50" y="138" width="230" height="40" fill="#fff" stroke="#5a5a5a" stroke-width="1"/>
+<text x="165.0" y="155.1" text-anchor="middle" font-size="12.5" font-weight="normal" fill="#222">SOR Model and Cognitive</text>
+<text x="165.0" y="169.6" text-anchor="middle" font-size="12.5" font-weight="normal" fill="#222">Appraisal Theory</text>
+<rect x="50" y="190" width="230" height="40" fill="#fff" stroke="#5a5a5a" stroke-width="1"/>
+<text x="165.0" y="207.1" text-anchor="middle" font-size="12.5" font-weight="normal" fill="#222">Six Perceived Attributes</text>
+<text x="165.0" y="221.6" text-anchor="middle" font-size="11" fill="#555">content · expression · interaction</text>
+<rect x="40" y="76" width="250" height="164" fill="none" stroke="#8a8a8a" stroke-width="1" stroke-dasharray="2.5 2"/>
+<path d="M165.0,56 L165.0,75" fill="none" stroke="#222" stroke-width="1.1" marker-end="url(#ah)"/>
+<rect x="385" y="30" width="230" height="40" fill="#fff" stroke="#5a5a5a" stroke-width="1"/>
+<text x="500.0" y="47.0" text-anchor="middle" font-size="12.5" font-weight="normal" fill="#222">Research Case</text>
+<text x="500.0" y="61.5" text-anchor="middle" font-size="11" fill="#555">GeoDrama, historic urban Nanjing</text>
+<path d="M500.0,70 L500.0,85" fill="none" stroke="#222" stroke-width="1.1" marker-end="url(#ah)"/>
+<rect x="385" y="86" width="230" height="40" fill="#fff" stroke="#5a5a5a" stroke-width="1"/>
+<text x="500.0" y="103.0" text-anchor="middle" font-size="12.5" font-weight="normal" fill="#222">Questionnaire Design</text>
+<text x="500.0" y="117.5" text-anchor="middle" font-size="11" fill="#555">27 items · 9 constructs</text>
+<path d="M500.0,126 L500.0,141" fill="none" stroke="#222" stroke-width="1.1" marker-end="url(#ah)"/>
+<rect x="385" y="142" width="230" height="40" fill="#fff" stroke="#5a5a5a" stroke-width="1"/>
+<text x="500.0" y="159.1" text-anchor="middle" font-size="12.5" font-weight="normal" fill="#222">On-site Walking Experience</text>
+<text x="500.0" y="173.6" text-anchor="middle" font-size="11" fill="#555">approx. 10–15 min</text>
+<path d="M500.0,182 L500.0,197" fill="none" stroke="#222" stroke-width="1.1" marker-end="url(#ah)"/>
+<rect x="385" y="198" width="230" height="40" fill="#fff" stroke="#5a5a5a" stroke-width="1"/>
+<text x="500.0" y="215.1" text-anchor="middle" font-size="12.5" font-weight="normal" fill="#222">Data Collection</text>
+<text x="500.0" y="229.6" text-anchor="middle" font-size="11" fill="#555">valid N = 548</text>
+<rect x="375" y="20" width="250" height="228" fill="none" stroke="#8a8a8a" stroke-width="1" stroke-dasharray="2.5 2"/>
+<rect x="720" y="30" width="230" height="40" fill="#fff" stroke="#5a5a5a" stroke-width="1"/>
+<text x="835.0" y="47.0" text-anchor="middle" font-size="12.5" font-weight="normal" fill="#222">Measurement Model Evaluation</text>
+<text x="835.0" y="61.5" text-anchor="middle" font-size="11" fill="#555">CFA: reliability and validity</text>
+<path d="M835.0,70 L835.0,85" fill="none" stroke="#222" stroke-width="1.1" marker-end="url(#ah)"/>
+<rect x="720" y="86" width="230" height="40" fill="#fff" stroke="#5a5a5a" stroke-width="1"/>
+<text x="835.0" y="103.0" text-anchor="middle" font-size="12.5" font-weight="normal" fill="#222">Structural Model Analysis</text>
+<text x="835.0" y="117.5" text-anchor="middle" font-size="11" fill="#555">SEM: H1–H14</text>
+<path d="M835.0,126 L835.0,141" fill="none" stroke="#222" stroke-width="1.1" marker-end="url(#ah)"/>
+<rect x="720" y="142" width="230" height="40" fill="#fff" stroke="#5a5a5a" stroke-width="1"/>
+<text x="835.0" y="159.1" text-anchor="middle" font-size="12.5" font-weight="normal" fill="#222">Alternative Models and</text>
+<text x="835.0" y="173.6" text-anchor="middle" font-size="12.5" font-weight="normal" fill="#222">Mediation Effects</text>
+<path d="M835.0,182 L835.0,197" fill="none" stroke="#222" stroke-width="1.1" marker-end="url(#ah)"/>
+<rect x="720" y="198" width="230" height="40" fill="#fff" stroke="#5a5a5a" stroke-width="1"/>
+<text x="835.0" y="215.1" text-anchor="middle" font-size="12.5" font-weight="normal" fill="#222">SEM–ANN Analysis</text>
+<text x="835.0" y="229.6" text-anchor="middle" font-size="11" fill="#555">ten-fold cross-validation</text>
+<rect x="710" y="20" width="250" height="228" fill="none" stroke="#8a8a8a" stroke-width="1" stroke-dasharray="2.5 2"/>
+<path d="M165.0,240 L165.0,269" fill="none" stroke="#222" stroke-width="1.1" marker-end="url(#ah)"/>
+<rect x="40" y="270" width="250" height="58" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<text x="165.0" y="296.1" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">Develop Research Hypotheses</text>
+<text x="165.0" y="310.6" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">(H1–H15) and Model</text>
+<path d="M500.0,248 L500.0,269" fill="none" stroke="#222" stroke-width="1.1" marker-end="url(#ah)"/>
+<rect x="375" y="270" width="250" height="58" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<text x="500.0" y="288.8" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">SPSS 27.0</text>
+<text x="500.0" y="303.3" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">+</text>
+<text x="500.0" y="317.8" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">AMOS 27.0</text>
+<path d="M835.0,248 L835.0,269" fill="none" stroke="#222" stroke-width="1.1" marker-end="url(#ah)"/>
+<rect x="710" y="270" width="250" height="58" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<text x="835.0" y="303.3" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">Results &amp; Discussion</text>
+<path d="M290,299.0 L332.5,299.0 L332.5,50.0 L384,50.0" fill="none" stroke="#222" stroke-width="1.1" marker-end="url(#ah)"/>
+<path d="M625,299.0 L667.5,299.0 L667.5,50.0 L719,50.0" fill="none" stroke="#222" stroke-width="1.1" marker-end="url(#ah)"/>
+<rect x="40" y="354" width="630" height="54" fill="none" stroke="#8a8a8a" stroke-width="1" stroke-dasharray="2.5 2"/>
+<rect x="50.0" y="364" width="194.0" height="34" fill="#fff" stroke="#5a5a5a" stroke-width="1"/>
+<text x="147.0" y="385.3" text-anchor="middle" font-size="12.5" font-weight="normal" fill="#222">Theoretical Contributions</text>
+<rect x="258.0" y="364" width="194.0" height="34" fill="#fff" stroke="#5a5a5a" stroke-width="1"/>
+<text x="355.0" y="385.3" text-anchor="middle" font-size="12.5" font-weight="normal" fill="#222">Practical Implications</text>
+<rect x="466.0" y="364" width="194.0" height="34" fill="#fff" stroke="#5a5a5a" stroke-width="1"/>
+<text x="563.0" y="385.3" text-anchor="middle" font-size="12.5" font-weight="normal" fill="#222">Limitations and Future Research</text>
+<path d="M835.0,328 L835.0,381 L671,381" fill="none" stroke="#222" stroke-width="1.1" marker-end="url(#ah)"/>
+</svg>
