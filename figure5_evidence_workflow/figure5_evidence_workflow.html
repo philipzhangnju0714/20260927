@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Research Process Figure</title>
+<style>
+@font-face{font-family:Pag;src:url(fonts/texgyrepagella-regular.otf)}
+@font-face{font-family:Pag;font-weight:bold;src:url(fonts/texgyrepagella-bold.otf)}
+@font-face{font-family:Pag;font-style:italic;src:url(fonts/texgyrepagella-italic.otf)}
+:root{
+  --ink:#1f1d1a; --muted:#5d5852; --faint:#8f8880; --line:#dcd5cc; --card:#faf8f4;
+  --acc:#8c2f1c;            /* key numbers, stage badges */
+  --cog:#2f5f7e;            /* cognitive pathway (HPM) */
+  --aff:#b4582c;            /* affective pathway (PA)  */
+  --res:#4a4038;            /* response (LHEI)          */
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#fff}
+body{font-family:Pag,serif;color:var(--ink);width:960px;padding:14px 16px 16px;font-size:13.5px;line-height:1.3}
+svg text{font-family:Pag,serif}
+
+/* column heads */
+.heads{display:grid;grid-template-columns:46px 352px 1fr;margin-bottom:6px}
+.heads div{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);padding-left:16px}
+.heads div:last-child{padding-left:20px}
+
+/* stage rows */
+.stage{display:grid;grid-template-columns:46px 1fr;position:relative}
+.rail{position:relative;display:flex;justify-content:center}
+.rail::before{content:"";position:absolute;top:0;bottom:0;left:50%;width:1.5px;background:var(--line);transform:translateX(-50%)}
+.stage:first-of-type .rail::before{top:22px}
+.stage.last .rail::before{bottom:auto;height:22px}
+.badge{position:relative;z-index:1;margin-top:9px;width:28px;height:28px;border-radius:50%;background:var(--acc);color:#fff;
+  font-weight:bold;font-size:15px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 4px #fff}
+.card{background:var(--card);border:1px solid var(--line);border-radius:9px;margin-bottom:9px;display:grid;grid-template-columns:352px 1fr;overflow:hidden}
+.proc{padding:9px 14px 10px 14px}
+.evid{padding:9px 14px 10px 18px;border-left:1px solid var(--line);background:#fff}
+.title{font-weight:bold;font-size:16px;line-height:1.2}
+.sec{font-style:italic;color:var(--faint);font-size:12.5px;margin-left:5px;font-weight:normal}
+.proc p{margin-top:5px}
+.proc ul{list-style:none;margin-top:5px}
+.proc li{position:relative;padding-left:12px;margin-top:3px}
+.proc li::before{content:"";position:absolute;left:1px;top:.58em;width:5px;height:5px;border-radius:50%;background:var(--faint)}
+.m{color:var(--muted)}
+.num{color:var(--acc);font-weight:bold}
+.small{font-size:12px;color:var(--muted)}
+.chip{display:inline-block;border:1px solid #c9c1b6;border-radius:4px;padding:0 5px;font-size:12.5px;background:#fff;line-height:1.45;margin:1px 1px}
+.attr{display:grid;grid-template-columns:78px 1fr;row-gap:1px;margin-top:5px;align-items:center}
+.attr i{color:var(--muted);font-size:12.5px}
+
+/* stage 2 timeline */
+.tl{margin-top:6px;position:relative}
+.tl .st{display:grid;grid-template-columns:16px 1fr;column-gap:6px;position:relative;padding-bottom:4px}
+.tl .st::before{content:"";position:absolute;left:7px;top:12px;bottom:-2px;width:1px;background:#c9c1b6}
+.tl .st:last-child::before{display:none}
+.tl .dot{width:9px;height:9px;border-radius:50%;border:1.5px solid var(--acc);background:#fff;margin:4px 0 0 3px;position:relative;z-index:1}
+.tl b{font-weight:bold}
+
+/* evidence */
+.ehead{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-bottom:3px}
+.thumbs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.thumbs figure img{width:100%;display:block;border-radius:4px;border:1px solid var(--line)}
+.thumbs figcaption{font-size:12px;color:var(--muted);margin-top:3px;line-height:1.2}
+.foot{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.3}
+
+/* synthesis */
+.synth{display:grid;grid-template-columns:46px 1fr;margin-top:1px}
+.sbox{border:1.5px solid var(--acc);border-radius:9px;padding:8px 14px 9px;display:grid;grid-template-columns:auto 1fr;column-gap:16px;align-items:center}
+.sbox .lab{font-weight:bold;font-size:16px;color:var(--acc);line-height:1.15}
+.sbox .lab span{display:block;font-style:italic;font-weight:normal;font-size:12.5px;color:var(--faint)}
+.lanes{display:grid;grid-template-columns:1.25fr 1fr 1fr;column-gap:14px}
+.lanes > div{font-size:13px;line-height:1.3}
+.lanes b{display:block;font-size:13.5px}
+.k{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:3px;vertical-align:0}
+.cog{color:var(--cog)} .aff{color:var(--aff)}
+</style></head><body>
+
+<div class="heads"><div></div><div>Procedure</div><div>Empirical evidence</div></div>
+
+<!-- ============ 1 ============ -->
+<div class="stage">
+ <div class="rail"><div class="badge">1</div></div>
+ <div class="card">
+  <div class="proc">
+   <div class="title">Case and stimulus<span class="sec">Section 3.1</span></div>
+   <p>GeoDrama deployed in Nanjing’s historic urban district: AI-generated, location-triggered narratives during a free walk without a predefined route.</p>
+   <div class="attr">
+    <i>Content</i><div><span class="chip">HC</span><span class="chip">PC</span></div>
+    <i>Expression</i><div><span class="chip">NC</span><span class="chip">NV</span></div>
+    <i>Interaction</i><div><span class="chip">PP</span><span class="chip">PIQ</span></div>
+   </div>
+   <p class="small" style="margin-top:4px">Six perceived attributes as stimuli (S) of the SOR model</p>
+  </div>
+  <div class="evid">
+   <div class="ehead">Platform in use (see Figure 4)</div>
+   <div class="thumbs">
+    <figure><img src="assets/thumb_a.png" alt=""><figcaption>Real-time positioning triggers the narrative of the nearby heritage site</figcaption></figure>
+    <figure><img src="assets/thumb_c.png" alt=""><figcaption>Dispersed heritage sites recommended for continued exploration</figcaption></figure>
+   </div>
+  </div>
+ </div>
+</div>
+
+<!-- ============ 2 ============ -->
+<div class="stage">
+ <div class="rail"><div class="badge">2</div></div>
+ <div class="card">
+  <div class="proc">
+   <div class="title">On-site data collection<span class="sec">Section 3.2</span></div>
+   <div class="tl">
+    <div class="st"><div class="dot"></div><div><b>Recruited on site</b> <span class="m">· adults; verbal consent</span></div></div>
+    <div class="st"><div class="dot"></div><div><b>Briefing</b> <span class="m">· operation and safety only; hypotheses not disclosed</span></div></div>
+    <div class="st"><div class="dot"></div><div><b>GeoDrama walk</b> <span class="m">· approx. <span class="num">10–15 min</span></span></div></div>
+    <div class="st"><div class="dot"></div><div><b>Questionnaire</b> <span class="m">· anonymous, on site, within <span class="num">5 min</span></span></div></div>
+   </div>
+   <p class="small">Central Nanjing, 5 April–20 August 2026; platform and generation settings held constant</p>
+  </div>
+  <div class="evid"><div class="ehead">Sample screening and profile (Table 1)</div><div id="ev2"></div></div>
+ </div>
+</div>
+
+<!-- ============ 3 ============ -->
+<div class="stage">
+ <div class="rail"><div class="badge">3</div></div>
+ <div class="card">
+  <div class="proc">
+   <div class="title">Measurement and validation<span class="sec">Sections 3.3, 4.1</span></div>
+   <p><span class="num">27 items · 9 constructs</span> <span class="m">(three items each; five-point Likert scale)</span></p>
+   <ul>
+    <li>Validated scales adapted; back-translation; wording reviewed by four experts</li>
+    <li>Nine-factor CFA (AMOS 27.0): reliability, convergent and discriminant validity</li>
+    <li>Harman’s test and VIFs as preliminary checks</li>
+   </ul>
+  </div>
+  <div class="evid"><div class="ehead">Observed range against criterion (Tables 2–5)</div><div id="ev3"></div></div>
+ </div>
+</div>
+
+<!-- ============ 4 ============ -->
+<div class="stage">
+ <div class="rail"><div class="badge">4</div></div>
+ <div class="card">
+  <div class="proc">
+   <div class="title">Structural model and alternative specifications<span class="sec">Sections 4.2–4.3</span></div>
+   <ul>
+    <li>Maximum-likelihood SEM: direct paths H1–H14</li>
+    <li>Three specifications differing only in the HPM–PA link (hypothesised, strict reverse, parallel), compared by AIC/BIC and χ² difference</li>
+    <li>Bias-corrected bootstrap, <span class="num">5,000</span> resamples: H15 and serial indirect associations</li>
+   </ul>
+  </div>
+  <div class="evid"><div class="ehead">Standardised estimates (Tables 6–7, Figure 6)</div><div id="ev4"></div></div>
+ </div>
+</div>
+
+<!-- ============ 5 ============ -->
+<div class="stage last">
+ <div class="rail"><div class="badge">5</div></div>
+ <div class="card">
+  <div class="proc">
+   <div class="title">SEM–ANN predictive comparison<span class="sec">Section 4.4</span></div>
+   <p>Three multilayer perceptrons (SPSS 27.0), one per SEM equation:</p>
+   <ul>
+    <li><b>A</b> <span class="m">six attributes → HPM</span></li>
+    <li><b>B</b> <span class="m">HC, PC, NC, NV, PP and HPM → PA</span></li>
+    <li><b>C</b> <span class="m">HPM and PA → LHEI</span></li>
+   </ul>
+   <p class="m">Ten-fold cross-validation; predictors ordered by normalised importance and compared with the SEM β order</p>
+  </div>
+  <div class="evid"><div class="ehead">SEM rank vs ANN rank (Table 8)</div><div id="ev5"></div></div>
+ </div>
+</div>
+
+<!-- ============ synthesis ============ -->
+<div class="synth">
+ <div></div>
+ <div class="sbox">
+  <div class="lab">Synthesis<span>Sections 5–6</span></div>
+  <div class="lanes">
+   <div><b>Attribute–pathway matching</b><span class="k" style="background:var(--cog)"></span><span class="cog">HC, NC, PIQ → cognitive (HPM)</span><br><span class="k" style="background:var(--aff)"></span><span class="aff">NV → affective (PA)</span> · PC, PP → both</div>
+   <div><b>Two organism states</b>HPM and PA structurally associated; each associated with LHEI</div>
+   <div><b>Implications</b>AI interpretation of dispersed, low-visibility heritage under SDG 11.4</div>
+  </div>
+ </div>
+</div>
+
+<script>
+/* ---------------------------------------------------------------
+   DATA — every number below is copied from the manuscript tables.
+   Edit here, then re-render.  (Table numbers refer to the revision.)
+---------------------------------------------------------------- */
+const DATA = {
+  sample: { collected: 607, valid: 548, excluded: 59, rate: 90.3,
+            male: 46.4, female: 53.6,
+            age: [["18–22",31.9],["23–27",29.9],["28–35",20.6],["36–45",13.0],["46–59",4.6]],
+            familiarity: [18.1,19.3,26.3,18.1,18.2] },            // completely unfamiliar → very familiar
+  quality: [ // label, lo, hi, criterion value, direction ('ge' = must be ≥, 'lt' = must be <), display text
+    ["Standardised loadings", .705, .836, .70, "ge", ".705–.836", "≥ .70"],
+    ["Cronbach’s α",           .798, .841, .70, "ge", ".798–.841", "≥ .70"],
+    ["Composite reliability",  .799, .842, .70, "ge", ".799–.842", "≥ .70"],
+    ["AVE",                    .570, .639, .50, "ge", ".570–.639", "≥ .50"],
+    ["HTMT (largest pair)",    .529, .529, .85, "lt", ".529",      "< .85"],
+    ["Harman’s first factor",  .2418,.2418,.50, "lt", "24.2%",     "< 50%"] ],
+  fit: "CFA fit: χ²/df = 1.166 · CFI = .992 · TLI = .990 · RMSEA = .017 · SRMR = .029; VIFs 1.10–1.60",
+  paths: { // β, significant?  (null = not hypothesised)
+    HC:[.285,true, .029,false], PC:[.291,true, .224,true], NC:[.171,true, .038,false],
+    NV:[-.005,false,.157,true], PP:[.153,true, .174,true], PIQ:[.220,true, null,null] },
+  organism: { hpm_pa:.300, hpm_lhei:.337, pa_lhei:.318, r2:{HPM:.466, PA:.389, LHEI:.328} },
+  alt: { aicHyp:509.780, aicRev:512.169, dchi:21.876, ddf:1, ind:.0954, ci:[.053,.155], share:22.1 },
+  ann: [ // model, outcome, [predictor, SEM rank, ANN rank, SEM β, ANN normalised importance], test RMSE
+    ["A","HPM",[["PC",1,1,.291,100],["HC",2,2,.285,89.7],["PIQ",3,3,.220,72.9],["NC",4,4,.171,58.5],["PP",5,5,.153,55.8],["NV",6,6,-.005,27.2]],.726],
+    ["B","PA", [["HPM",1,1,.300,100],["PC",2,2,.224,88.4],["PP",3,3,.174,69.6],["NV",4,4,.157,50.0],["NC",5,6,.038,31.6],["HC",6,5,.029,34.2]],.778],
+    ["C","LHEI",[["HPM",1,1,.337,100],["PA",2,2,.318,86.1]],.802] ]
+};
+
+/* ---------- tiny SVG helper ---------- */
+const NS="http://www.w3.org/2000/svg";
+function el(tag,attrs={},parent,text){const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);if(text!==undefined)e.textContent=text;if(parent)parent.appendChild(e);return e}
+function svgIn(id,w,h){const s=el("svg",{width:w,height:h,viewBox:`0 0 ${w} ${h}`});document.getElementById(id).appendChild(s);return s}
+const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const C={ink:css("--ink"),muted:css("--muted"),faint:css("--faint"),line:css("--line"),acc:css("--acc"),cog:css("--cog"),aff:css("--aff"),res:css("--res")};
+const f3=v=>(v<0?"−":"")+Math.abs(v).toFixed(3).replace(/^0/,"");
+const W=496; // evidence column inner width
+
+/* ---------- 2: screening funnel + profile ---------- */
+(function(){
+  const d=DATA.sample, s=svgIn("ev2",W,142);
+  const x0=0, bw=W-2, k=bw/d.collected, y=16, h=20;
+  el("text",{x:0,y:11,"font-size":12.5,fill:C.muted},s,`${d.collected} participants completed the walk and questionnaire`);
+  el("rect",{x:x0,y,width:d.valid*k,height:h,rx:3,fill:C.acc},s);
+  el("rect",{x:x0+d.valid*k+1.5,y,width:d.excluded*k-1.5,height:h,rx:3,fill:"#e6d6cf"},s);
+  el("text",{x:8,y:y+14.5,"font-size":14,fill:"#fff","font-weight":"bold"},s,`N = ${d.valid} valid`);
+  el("text",{x:d.valid*k-8,y:y+14.5,"font-size":12.5,fill:"#fff","text-anchor":"end"},s,`${d.rate}% retained`);
+  el("text",{x:bw-4,y:y+14.5,"font-size":12.5,fill:C.acc,"text-anchor":"end"},s,`−${d.excluded}`);
+  el("text",{x:0,y:y+h+14,"font-size":11.5,fill:C.faint},s,"Excluded: incomplete walk, system failure, straight-lining, low variance, contradictions");
+
+  // age bars
+  const ay=62, ah=44, aw=34, gap=12;
+  el("text",{x:0,y:ay+2,"font-size":12,fill:C.muted},s,"Age (%)");
+  const max=35;
+  d.age.forEach(([lab,v],i)=>{const x=i*(aw+gap), bh=v/max*ah;
+    el("rect",{x,y:ay+18+ah-bh,width:aw,height:bh,fill:i<3?"#b98a79":"#ddc9c0",rx:2},s);
+    el("text",{x:x+aw/2,y:ay+18+ah-bh-3,"font-size":11.5,"text-anchor":"middle",fill:C.ink},s,v.toFixed(1));
+    el("text",{x:x+aw/2,y:ay+ah+31,"font-size":11,"text-anchor":"middle",fill:C.faint},s,lab);});
+  // familiarity stacked + gender
+  const fx=250, fw=W-fx-2;
+  el("text",{x:fx,y:ay+2,"font-size":12,fill:C.muted},s,"Familiarity with the area (%)");
+  const shades=["#f1e6e1","#e2cdc4","#c9a698","#a9796a","#7f4c3e"]; let cx=fx;
+  d.familiarity.forEach((v,i)=>{const w=v/100*fw; el("rect",{x:cx,y:ay+10,width:w-1.5,height:18,fill:shades[i]},s);
+    el("text",{x:cx+w/2,y:ay+23,"font-size":11.5,"text-anchor":"middle",fill:i>2?"#fff":C.ink},s,v.toFixed(1)); cx+=w;});
+  el("text",{x:fx,y:ay+41,"font-size":11,fill:C.faint},s,"completely unfamiliar");
+  el("text",{x:fx+fw,y:ay+41,"font-size":11,fill:C.faint,"text-anchor":"end"},s,"very familiar");
+  el("text",{x:fx,y:ay+60,"font-size":12,fill:C.muted},s,"Gender (%)");
+  const gx=fx+70, gw=fw-70; el("rect",{x:gx,y:ay+49,width:gw*d.male/100-1.5,height:14,fill:"#c9b8ad"},s);
+  el("rect",{x:gx+gw*d.male/100,y:ay+49,width:gw*d.female/100,height:14,fill:"#8f7466"},s);
+  el("text",{x:gx+5,y:ay+60,"font-size":11.5,fill:C.ink},s,`male ${d.male}`);
+  el("text",{x:gx+gw-5,y:ay+60,"font-size":11.5,fill:"#fff","text-anchor":"end"},s,`female ${d.female}`);
+})();
+
+/* ---------- 3: range-vs-criterion plot ---------- */
+(function(){
+  const q=DATA.quality, rowH=19, top=16, lab=150, px0=lab+6, pw=230, s=svgIn("ev3",W,top+q.length*rowH+30);
+  const X=v=>px0+v*pw;
+  // axis
+  [0,.25,.5,.75,1].forEach(t=>{el("line",{x1:X(t),x2:X(t),y1:top-4,y2:top+q.length*rowH-4,stroke:"#eee8e0"},s);
+    el("text",{x:X(t),y:top-7,"font-size":10.5,fill:C.faint,"text-anchor":"middle"},s,t===0?"0":t===1?"1":String(t).replace(/^0/,""));});
+  el("text",{x:px0+pw+12,y:top-7,"font-size":10.5,fill:C.faint},s,"observed");
+  el("text",{x:W-2,y:top-7,"font-size":10.5,fill:C.faint,"text-anchor":"end"},s,"criterion");
+  q.forEach(([name,lo,hi,crit,dir,txt,ctxt],i)=>{
+    const y=top+i*rowH+5;
+    el("text",{x:lab,y:y+4,"font-size":12.5,fill:C.ink,"text-anchor":"end"},s,name);
+    // acceptable zone
+    const zx=dir==="ge"?X(crit):X(0), zw=dir==="ge"?X(1)-X(crit):X(crit)-X(0);
+    el("rect",{x:zx,y:y-5,width:zw,height:10,fill:"#eef2ea"},s);
+    el("line",{x1:X(crit),x2:X(crit),y1:y-7,y2:y+7,stroke:C.muted,"stroke-width":1.4,"stroke-dasharray":"2 1.5"},s);
+    if(hi>lo) el("rect",{x:X(lo),y:y-3.5,width:X(hi)-X(lo),height:7,rx:3.5,fill:C.acc},s);
+    else el("circle",{cx:X(lo),cy:y,r:4,fill:C.acc},s);
+    el("text",{x:px0+pw+12,y:y+4,"font-size":12.5,fill:C.acc,"font-weight":"bold"},s,txt);
+    el("text",{x:W-2,y:y+4,"font-size":12,fill:C.muted,"text-anchor":"end"},s,ctxt);
+  });
+  const ly=top+q.length*rowH+4;
+  el("rect",{x:px0,y:ly,width:14,height:8,fill:"#eef2ea"},s);
+  el("text",{x:px0+18,y:ly+8,"font-size":11,fill:C.faint},s,"acceptable region");
+  el("line",{x1:px0+112,x2:px0+112,y1:ly-1,y2:ly+10,stroke:C.muted,"stroke-dasharray":"2 1.5","stroke-width":1.4},s);
+  el("text",{x:px0+117,y:ly+8,"font-size":11,fill:C.faint},s,"criterion");
+  el("text",{x:0,y:ly+24,"font-size":12,fill:C.muted},s,DATA.fit);
+})();
+
+/* ---------- 4: attribute–pathway matrix + organism diagram + model comparison ---------- */
+(function(){
+  const P=DATA.paths, O=DATA.organism, A=DATA.alt, s=svgIn("ev4",W,226);
+  const defs=el("defs",{},s);
+  [["aI",C.ink],["aC",C.cog],["aA",C.aff]].forEach(([id,c])=>{const m=el("marker",{id,viewBox:"0 0 10 10",refX:9,refY:5,markerWidth:6,markerHeight:6,orient:"auto-start-reverse"},defs);el("path",{d:"M0,0 L10,5 L0,10 z",fill:c},m);});
+  // matrix
+  const cx1=72, cx2=142, top=30, rh=21, names=Object.keys(P);
+  el("text",{x:cx1,y:12,"font-size":12,"text-anchor":"middle",fill:C.cog,"font-weight":"bold"},s,"→ HPM");
+  el("text",{x:cx2,y:12,"font-size":12,"text-anchor":"middle",fill:C.aff,"font-weight":"bold"},s,"→ PA");
+  el("text",{x:cx1,y:23,"font-size":10.5,"text-anchor":"middle",fill:C.faint},s,"cognitive");
+  el("text",{x:cx2,y:23,"font-size":10.5,"text-anchor":"middle",fill:C.faint},s,"affective");
+  names.forEach((n,i)=>{const y=top+i*rh+10; const [b1,s1,b2,s2]=P[n];
+    if(i%2===0) el("rect",{x:0,y:y-10,width:178,height:rh,fill:"#f7f4ef"},s);
+    el("text",{x:8,y:y+4,"font-size":12.5,fill:C.ink},s,n);
+    [[cx1,b1,s1,C.cog],[cx2,b2,s2,C.aff]].forEach(([x,b,sig,c])=>{
+      if(b===null){el("text",{x,y:y+4,"font-size":11,"text-anchor":"middle",fill:C.faint},s,"not hyp.");return;}
+      if(sig){const r=3+Math.sqrt(Math.abs(b))*9; el("circle",{cx:x-14,cy:y,r:Math.min(r,8.5),fill:c},s);
+        el("text",{x:x-3,y:y+4,"font-size":12,fill:c,"font-weight":"bold"},s,f3(b));}
+      else{el("circle",{cx:x-14,cy:y,r:4,fill:"none",stroke:C.faint,"stroke-width":1},s);
+        el("text",{x:x-3,y:y+4,"font-size":12,fill:C.faint},s,"n.s.");}
+    });});
+  el("text",{x:0,y:top+6*rh+12,"font-size":11,fill:C.faint},s,"filled = p ≤ .001; size ∝ |β|");
+
+  // organism diagram
+  const node=(x,y,lab,r2,c)=>{el("rect",{x:x-34,y:y-17,width:68,height:34,rx:17,fill:"#fff",stroke:c,"stroke-width":1.6},s);
+    el("text",{x,y:y+1,"font-size":13.5,"text-anchor":"middle",fill:c,"font-weight":"bold"},s,lab);
+    el("text",{x,y:y+12.5,"font-size":10.5,"text-anchor":"middle",fill:C.muted},s,`R² = ${f3(r2)}`);};
+  const hx=262, hy=44, ay=134, lx=430, ly=89;
+  // stimulus bundles
+  el("path",{d:`M184,${top+2*rh} C210,${top+2*rh} 214,${hy} ${hx-38},${hy}`,fill:"none",stroke:C.cog,"stroke-width":2.2,opacity:.55,"marker-end":"url(#aC)"},s);
+  el("path",{d:`M184,${top+4*rh} C210,${top+4*rh} 214,${ay} ${hx-38},${ay}`,fill:"none",stroke:C.aff,"stroke-width":2.2,opacity:.55,"marker-end":"url(#aA)"},s);
+  el("line",{x1:hx,y1:hy+18,x2:hx,y2:ay-19,stroke:C.ink,"stroke-width":1.6,"marker-end":"url(#aI)"},s);
+  el("text",{x:hx+6,y:(hy+ay)/2+4,"font-size":12.5,fill:C.ink,"font-weight":"bold"},s,f3(O.hpm_pa));
+  el("line",{x1:hx+34,y1:hy+6,x2:lx-37,y2:ly-9,stroke:C.ink,"stroke-width":1.6,"marker-end":"url(#aI)"},s);
+  el("line",{x1:hx+34,y1:ay-6,x2:lx-37,y2:ly+9,stroke:C.ink,"stroke-width":1.6,"marker-end":"url(#aI)"},s);
+  el("text",{x:(hx+lx)/2+4,y:(hy+ly)/2-8,"font-size":12.5,fill:C.ink,"font-weight":"bold","text-anchor":"middle"},s,f3(O.hpm_lhei));
+  el("text",{x:(hx+lx)/2+4,y:(ay+ly)/2+18,"font-size":12.5,fill:C.ink,"font-weight":"bold","text-anchor":"middle"},s,f3(O.pa_lhei));
+  node(hx,hy,"HPM",O.r2.HPM,C.cog); node(hx,ay,"PA",O.r2.PA,C.aff); node(lx,ly,"LHEI",O.r2.LHEI,C.res);
+  el("text",{x:lx,y:ly+34,"font-size":11,"text-anchor":"middle",fill:C.muted},s,`indirect via PA = ${f3(A.ind)}`);
+  el("text",{x:lx,y:ly+47,"font-size":11,"text-anchor":"middle",fill:C.muted},s,`95% CI [${f3(A.ci[0])}, ${f3(A.ci[1])}]; ${A.share}%`);
+
+  // alternative specifications strip
+  const y0=180; el("line",{x1:0,x2:W,y1:y0-6,y2:y0-6,stroke:C.line},s);
+  el("text",{x:0,y:y0+10,"font-size":12,fill:C.muted},s,"HPM–PA link:");
+  const glyph=(x,kind,l1,l2,keep)=>{
+    const a=x, b=x+58, y=y0+6;
+    el("text",{x:a,y:y+4,"font-size":11.5,fill:C.cog,"text-anchor":"middle","font-weight":"bold"},s,"HPM");
+    el("text",{x:b,y:y+4,"font-size":11.5,fill:C.aff,"text-anchor":"middle","font-weight":"bold"},s,"PA");
+    if(kind==="f") el("line",{x1:a+17,x2:b-12,y1:y,y2:y,stroke:C.ink,"stroke-width":1.4,"marker-end":"url(#aI)"},s);
+    if(kind==="r") el("line",{x1:b-12,x2:a+17,y1:y,y2:y,stroke:C.ink,"stroke-width":1.4,"marker-end":"url(#aI)"},s);
+    if(kind==="n") el("text",{x:(a+b)/2+2,y:y+4,"font-size":11,fill:C.faint,"text-anchor":"middle"},s,"·  ·  ·");
+    el("text",{x:(a+b)/2,y:y+22,"font-size":11.5,fill:keep?C.acc:C.muted,"text-anchor":"middle","font-weight":keep?"bold":"normal"},s,l1);
+    if(l2) el("text",{x:(a+b)/2,y:y+35,"font-size":10.5,fill:C.faint,"text-anchor":"middle"},s,l2);
+  };
+  glyph(108,"f",`AIC ${A.aicHyp.toFixed(1)}`,"hypothesised, retained",true);
+  glyph(240,"r",`AIC ${A.aicRev.toFixed(1)}`,"strict reverse, similar fit");
+  glyph(372,"n",`Δχ² = ${A.dchi.toFixed(2)}, p < .001`,"parallel, worse fit");
+})();
+
+/* ---------- 5: rank-concordance slopegraphs ---------- */
+(function(){
+  const M=DATA.ann, s=svgIn("ev5",W,182), colW=[170,170,156];
+  let x=0;
+  M.forEach(([id,out,rows,rmse],mi)=>{
+    const L=x+42, R=x+colW[mi]-50, top=34, rh=19;
+    el("text",{x:x,y:12,"font-size":13,fill:C.ink,"font-weight":"bold"},s,`${id}  → ${out}`);
+    el("text",{x:L,y:27,"font-size":10.5,fill:C.faint,"text-anchor":"end"},s,"SEM");
+    el("text",{x:R,y:27,"font-size":10.5,fill:C.faint},s,"ANN");
+    rows.forEach(([p,rs,ra,b,imp])=>{
+      const y1=top+(rs-1)*rh+6, y2=top+(ra-1)*rh+6, same=rs===ra;
+      el("line",{x1:L+4,y1:y1-4,x2:R-4,y2:y2-4,stroke:same?"#bdb4a9":C.acc,"stroke-width":same?1.3:2},s);
+      el("circle",{cx:L+4,cy:y1-4,r:2.6,fill:same?C.muted:C.acc},s);
+      el("circle",{cx:R-4,cy:y2-4,r:2.6,fill:same?C.muted:C.acc},s);
+      el("text",{x:L-4,y:y1,"font-size":12,"text-anchor":"end",fill:same?C.ink:C.acc,"font-weight":same?"normal":"bold"},s,`${rs} ${p}`);
+      el("text",{x:R+4,y:y2,"font-size":12,fill:same?C.ink:C.acc,"font-weight":same?"normal":"bold"},s,`${ra}`);
+      el("text",{x:R+16,y:y2,"font-size":10.5,fill:C.faint},s,`${imp.toFixed(imp===100?0:1)}%`);
+    });
+    const by=top+6*rh+4;
+    el("text",{x:x,y:by+4,"font-size":11.5,fill:C.muted},s,`test RMSE = ${f3(rmse)}`);
+    x+=colW[mi];
+  });
+  // model C has spare vertical space — put the headline there
+  const hx=346, hy=96;
+  el("text",{x:hx,y:hy,"font-size":24,fill:C.acc,"font-weight":"bold"},s,"12 / 14");
+  el("text",{x:hx,y:hy+16,"font-size":12,fill:C.ink},s,"rank positions concordant");
+  el("text",{x:hx,y:hy+31,"font-size":11,fill:C.faint},s,"only reversal: HC, NC → PA,");
+  el("text",{x:hx,y:hy+44,"font-size":11,fill:C.faint},s,"both n.s. in SEM");
+  el("text",{x:0,y:174,"font-size":11,fill:C.faint},s,"% = mean normalised importance (ten folds); test RMSE ≤ training RMSE in all models");
+})();
+</script>
+</body></html>
